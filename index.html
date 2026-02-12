@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Jornada Social</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-scene">
+        <div class="ui-overlay">
+            <div class="score-card">⭐ <span id="stars">0</span> Pontos</div>
+            <div class="info-card">📍 Casa: <span id="current-step">0</span>/100</div>
+        </div>
+
+        <div id="board-container">
+            <div id="game-path">
+                <div id="player">🚀</div>
+            </div>
+        </div>
+
+        <div class="deck-area">
+            <div class="card-pile" id="normal-pile">🛒 Cartas Comuns</div>
+            <div class="card-pile obstacle-pile" id="hard-pile">🔥 SUPER DESAFIO</div>
+            <button id="roll-btn" onclick="rollDice()">🎲 JOGAR DADO</button>
+            <div id="dice-value">?</div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="card-template" id="card-content">
+            <div id="card-type-label">DESAFIO</div>
+            <h2 id="question-text">Pergunta aqui?</h2>
+            <div id="options-box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
